@@ -97,4 +97,40 @@ public class Objave {
 
 	}
 
+	// More (...) Button
+
+	public static void getMoreButton(WebDriver driver) {
+		List<WebElement> list = driver.findElements(By.className(MOREBUTTON));
+		list.get(0).click();
+	}
+
+	// Delete post
+
+	public static void getDelete(WebDriver driver) {
+		List<WebElement> list = driver.findElements(By.className(DELETEBUTTON));
+		list.get(0).click();
+	}
+
+	// Edit post
+
+	public static void getEdit(WebDriver driver) {
+		List<WebElement> list = driver.findElements(By.className(EDITPOST));
+		list.get(0).click();
+	}
+
+	// Edit post
+
+	public static void editPost(WebDriver driver) {
+		WebElement element = driver.findElement(By.xpath(EDITPOST));
+		element.click();
+		element.sendKeys("Lorem Ipsum is simply dummy text of the printing and typesetting industry.");
+	}
+
+	// Publish edited post
+
+	public static void publishEdit(WebDriver driver) {
+		WebElement element = driver.findElement(By.xpath(PUBLISHEDIT));
+		element.click();
+
+	}
 }

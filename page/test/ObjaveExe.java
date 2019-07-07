@@ -29,4 +29,23 @@ public class ObjaveExe {
 
 		Objave.clickPushPost(driver);
 	}
+
+	// Delete post(s), where "n" is the number of posts to delete
+
+	public static void deletePost(WebDriver driver, int n) throws Exception {
+
+		for (int index = 1; index <= n; index++) {
+			Objave.getMoreButton(driver);
+			Objave.getDelete(driver);
+		}
+	}
+
+	// Edit last post
+
+	public static void editPost(WebDriver driver) throws Exception {
+		Objave.getMoreButton(driver);
+		Objave.getEdit(driver);
+		Objave.editPost(driver);
+		Objave.publishEdit(driver);
+	}
 }
